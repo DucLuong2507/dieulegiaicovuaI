@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điều lệ Giải Cờ Vua THPT Số 2 Bảo Thắng Lần I</title>
+    <link rel="icon" type="image/jpg" href="img1.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+
+    <style>
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        :root {
+            --font-heading: 'Merriweather', serif;
+            --font-body: 'Inter', sans-serif;
+            --color-primary: #003366; 
+            --color-secondary: #5a6268; 
+            --color-text: #212529;      
+            --color-border: #dee2e6;
+            
+            /* [MỚI] Thêm màu nền cho các section để dễ đọc hơn */
+            --color-section-bg: #ffffff;
+        }
+
+        body {
+            font-family: var(--font-body); 
+            line-height: 1.7; 
+            margin: 0;
+            padding: 0;
+            color: var(--color-text); 
+            font-size: 16px;
+            /* [ĐÃ SỬA] Thêm một lớp gradient nữa để nền sâu hơn */
+            background: linear-gradient(120deg, #f0f2f5 0%, #e6e9f0 100%);
+            background-attachment: fixed;
+        }
+
+        /* [MỚI] Phần Quốc hiệu ở đầu trang */
+        .national-header {
+            text-align: center;
+            padding: 30px 20px 10px 20px;
+            font-size: 0.95em;
+            color: var(--color-secondary);
+            animation: fadeInSlideUp 0.6s ease-out forwards; 
+        }
+        .national-header p {
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .national-header .motto {
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--color-primary); 
+            display: inline-block;
+            padding-bottom: 2px;
+            color: var(--color-text);
+        }
+
+        .container {
+            max-width: 850px; 
+            margin: 20px auto 40px auto; 
+            padding: 50px; 
+            border-radius: 8px; /* [MỚI] Tăng nhẹ bo góc */
+            animation: fadeInSlideUp 0.7s ease-out 0.1s forwards; 
+            animation-fill-mode: backwards; 
+            
+            /* [ĐÃ SỬA] Tăng độ mờ đục của nền container để dễ đọc chữ */
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px); /* [MỚI] Tăng độ mờ */
+            -webkit-backdrop-filter: blur(12px);
+            /* [ĐÃ SỬA] Giảm nhẹ độ sáng của viền */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            /* [ĐÃ SỬA] Tăng độ sâu cho bóng đổ */
+            box-shadow: 0 10px 35px 0 rgba(0, 0, 0, 0.1);
+        }
+
+        .school-header {
+            margin-bottom: 20px;
+            font-size: 0.95em; 
+            color: var(--color-secondary);
+        }
+        
+        .school-info {
+            text-align: left; 
+        }
+        .school-info p {
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .school-info .club-name {
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--color-primary); 
+            display: inline-block;
+            padding-bottom: 2px;
+            color: var(--color-text);
+        }
+
+        /* --- Ngày tháng & Tiêu đề chính --- */
+        .date-location {
+            text-align: right;
+            font-style: italic;
+            margin-bottom: 40px; 
+            color: var(--color-secondary);
+        }
+
+        .main-title {
+            text-align: center;
+            font-family: var(--font-heading); 
+            font-size: 2.2em; 
+            font-weight: 900;
+            color: var(--color-primary); 
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            letter-spacing: 1.5px;
+            /* [MỚI] Thêm bóng đổ nhẹ cho tiêu đề chính */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+        }
+
+        .sub-title {
+            text-align: center;
+            font-family: var(--font-heading); 
+            font-size: 1.6em; 
+            font-weight: 700;
+            margin-bottom: 40px; 
+            color: #444;
+            /* [MỚI] Thêm khoảng cách chữ cho tiêu đề phụ */
+            letter-spacing: 0.5px;
+        }
+
+        /* --- Nội dung chính --- */
+        .content section {
+            margin-bottom: 25px;
+            padding: 25px 30px; /* [ĐÃ SỬA] Tăng nhẹ padding */
+            border-radius: 6px; 
+            
+            /* [ĐÃ SỬA] Bỏ hiệu ứng glass-on-glass (kính trên kính) */
+            /* Thay vào đó dùng nền trắng đục để nội dung rõ ràng nhất */
+            background: var(--color-section-bg); 
+            backdrop-filter: none; /* Bỏ bộ lọc */
+            -webkit-backdrop-filter: none;
+            /* [ĐÃ SỬA] Dùng viền xám nhạt thay vì viền trắng */
+            border: 1px solid var(--color-border); 
+            
+            box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.05); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .content section:hover {
+            transform: translateY(-5px); 
+            /* [ĐÃ SỬA] Tăng nhẹ bóng đổ khi hover */
+            box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1); 
+        }
+        
+        .hidden-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .show-scroll {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .content h2 {
+            font-family: var(--font-heading);
+            font-size: 1.6em;
+            font-weight: 700;
+            margin-bottom: 25px;
+            margin-top: 35px;
+            color: var(--color-primary);
+            border-bottom: 2px solid var(--color-border);
+            padding-bottom: 10px;
+            transition: color 0.3s ease;
+            
+            /* [MỚI] Sử dụng Flexbox để căn chỉnh icon */
+            display: flex;
+            align-items: center;
+            gap: 15px; /* Khoảng cách giữa icon và chữ */
+        }
+        
+        /* [MỚI] Thêm icon chủ đề cho mỗi tiêu đề h2 */
+        .content h2::before {
+            font-size: 1.3em;
+            font-family: 'Inter', sans-serif; /* Đảm bảo emoji hiển thị đúng */
+            margin-top: -3px; /* Tinh chỉnh vị trí dọc */
+        }
+        
+        /* [MỚI] Tùy chỉnh icon cho từng mục */
+        .content section:nth-of-type(1) h2::before { content: '🎯'; } /* Mục đích */
+        .content section:nth-of-type(2) h2::before { content: '👥'; } /* Đối tượng */
+        .content section:nth-of-type(3) h2::before { content: '⚖️'; } /* Luật */
+        .content section:nth-of-type(4) h2::before { content: '🏆'; } /* Khen thưởng */
+        .content section:nth-of-type(5) h2::before { content: '📌'; } /* Quy định khác */
+
+        
+        .content h2:hover { color: #0056b3; }
+
+        .content h3 {
+            font-family: var(--font-heading);
+            font-size: 1.3em;
+            font-weight: 700;
+            font-style: normal; 
+            margin-left: 0; 
+            margin-bottom: 15px;
+            color: #333;
+            transition: color 0.3s ease; 
+        }
+        .content h3:hover { color: var(--color-primary); }
+        
+        .content h4 {
+            font-size: 1.1em;
+            font-weight: 700;
+            margin-left: 0; 
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .content p, .content ul {
+            margin-left: 0; 
+            margin-bottom: 1.25em; 
+            text-align: left; 
+        }
+
+        .content ul {
+            list-style-type: disc;
+            padding-left: 25px; 
+        }
+        .content li { margin-bottom: 10px; }
+        
+        /* [MỚI] Thêm ký hiệu cho các mục con trong danh sách */
+        .content li::marker {
+            color: var(--color-primary);
+            font-size: 1.1em;
+        }
+        
+        .content a {
+            color: var(--color-primary);
+            font-weight: 600;
+            text-decoration: none;
+            position: relative; 
+            background-image: linear-gradient(var(--color-primary), var(--color-primary));
+            background-position: 0% 100%;
+            background-repeat: no-repeat;
+            background-size: 0% 2px; 
+            transition: background-size 0.3s ease, color 0.3s ease; 
+        }
+        .content a:hover {
+            color: #0056b3; 
+            background-size: 100% 2px; 
+        }
+
+        /* --- Phần Chữ ký --- */
+        .signature-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 70px; 
+        }
+        .signature-block { text-align: center; }
+        .signature-block p {
+            margin: 0;
+            font-family: var(--font-heading); 
+            font-weight: 700; 
+            font-size: 1.1em;
+        }
+
+        /* --- CSS CHO NÚT BẤM --- */
+        .button-container {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 2px solid var(--color-border); 
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 14px 28px; 
+            text-decoration: none;
+            font-family: var(--font-body); 
+            font-weight: 700; 
+            border-radius: 8px; 
+            margin: 5px 10px;
+            transition: all 0.3s ease; 
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border: 2px solid var(--color-primary); 
+            background-color: var(--color-primary);
+            color: #ffffff;
+            cursor: pointer; /* [MỚI] Thêm con trỏ chuột */
+        }
+        .cta-button.secondary {
+             background-color: var(--color-section-bg); /* [ĐÃ SỬA] Dùng nền trắng */
+             color: var(--color-primary);
+        }
+        .cta-button:hover {
+            opacity: 1;
+            transform: translateY(-3px); 
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* [MỚI] Thêm hiệu ứng giãn chữ khi hover */
+            letter-spacing: 1px;
+        }
+        .cta-button.secondary:hover {
+            background-color: var(--color-primary);
+            color: #ffffff;
+        }
+        
+        /* --- CSS TỐI ƯU CHO ĐIỆN THOẠI (RESPONSIVE) --- */
+        @media (max-width: 800px) {
+            body { font-size: 15px; }
+
+            .national-header {
+                padding-top: 20px;
+                padding-bottom: 0;
+            }
+
+            .container {
+                margin: 20px 10px;
+                /* [ĐÃ SỬA] Giảm padding trên điện thoại */
+                padding: 30px 20px;
+                /* [MỚI] Tắt bớt hiệu ứng blur trên điện thoại để tăng hiệu năng */
+                backdrop-filter: none;
+                -webkit-backdrop-filter: none;
+                background: rgba(255, 255, 255, 0.95); /* Nền gần như đục */
+            }
+
+            .school-header {
+                 text-align: center;
+                 margin-bottom: 15px;
+            }
+
+            .date-location {
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .main-title {
+                font-size: 1.9em;
+                letter-spacing: 1px;
+            }
+            .sub-title { font-size: 1.4em; }
+            .content h2 { 
+                font-size: 1.5em; 
+                /* [MỚI] Giảm gap icon trên điện thoại */
+                gap: 12px;
+            }
+            .content h2::before { font-size: 1.2em; } /* [MỚI] Thu nhỏ icon */
+            
+            .content h3 { font-size: 1.2em; }
+            .content section { 
+                padding: 20px; 
+            }
+
+            .signature-section {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 40px;
+            }
+            .signature-block { margin-bottom: 25px; }
+            .signature-block:last-child { margin-bottom: 0; }
+
+            .button-container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .cta-button {
+                width: 90%;
+                margin: 8px 0;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="national-header">
+        <p>CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM</p>
+        <p class="motto">Độc lập - Tự do - Hạnh phúc</p>
+    </div>
+
+    <div class="container">
+        <div class="school-header">
+            <div class="school-info">
+                <p>THPT SỐ 2 BẢO THẮNG</p>
+                <p class="club-name">CLB CỜ VUA</p>
+            </div>
+        </div>
+
+        <p class="date-location">
+            Gia Phú, ngày 02 tháng 11 năm 2025
+        </p>
+
+        <h1 class="main-title">ĐIỀU LỆ</h1>
+        <h2 class="sub-title">GIẢI CỜ VUA THPT SỐ 2 BẢO THẮNG LẦN THỨ I</h2>
+
+        <div class="content">
+            <section class="hidden-scroll">
+                <h2>I. Mục đích, yêu cầu</h2>
+                <h3>1. Mục đích</h3>
+                <p>Phát triển phòng trào Cờ vua ở lứa tuổi thanh thiếu niên và phát triển Câu lạc bộ ở trường THPT số 2 Bảo Thắng.</p>
+                
+                <h3>2. Yêu cầu</h3>
+                <ul>
+                    <li>Yêu cầu an toàn thiết thực hiệu quả tiết kiệm</li>
+                    <li>Chấp hành nghiêm Điều lệ giải.</li>
+                    <li>Vận động viên thi đấu với tinh thần đoàn kết, trung thực, trao đổi học hỏi kinh nghiệm lẫn nhau cùng tiến bộ.</li>
+                </ul>
+            </section>
+
+            <section class="hidden-scroll">
+                <h2>II. Đối tượng và nội dung, đăng kí thi đấu.</h2>
+                <h3>1. Đối tượng</h3>
+                <p>Là học sinh thuộc câu lạc bộ cờ vua trường THPT số 2 Bảo Thắng.</p>
+
+                <h3>2. Nội dung và thời gian thi đấu, địa điểm.</h3>
+                <h4>2.1. Nội dung</h4>
+                <p>Tổ chức 1 bảng thi đấu không phân biệt giới tính.</p>
+                
+                <h4>2.2. Thời gian, địa điểm</h4>
+                <ul>
+                    <li><strong>Địa điểm:</strong> trường THPT s2BT</li>
+                    <li><strong>Thời gian:</strong> Thi đấu dự kiến từ 10/11/2025</li>
+                </ul>
+
+                <h3>3. Đăng ký thi đấu</h3>
+                <ul>
+                    <li>Vận động viên đăng ký thi đấu qua <a href="https://docs.google.com/forms/d/1GJoBRZ3OxERoSFpz3jylS-emKDozwdFjJJn5rGwalb8/viewform" target="_blank" title="Link đăng ký Google Form">link đăng ký qua google form</a> được để ở cuối website.</li>
+                    <li><strong>Lệ phí đăng ký thi đấu:</strong> miễn phí.</li>
+                    <li>Tất cả các danh sách đăng ký chỉ hợp lệ khi đăng ký qua google form đăng ký thi đấu của Ban Tổ Chức trước hạn đăng ký (hạn cuối đăng ký thi đấu: <strong>09/11/2025</strong>).</li>
+                </ul>
+            </section>
+
+            <section class="hidden-scroll">
+                <h2>III. Luật, thể thức thi đấu và xếp hạng.</h2>
+                <h3>1. Luật</h3>
+                <p>Áp dụng thi đấu mới nhất do Liên đoàn Cờ Việt Nam ban hành.</p>
+
+                <h3>2. Thể thức thi đấu</h3>
+                <p>Tổ chức thi đấu <strong>09 ván cờ nhanh</strong> với thể thức 10 (Mỗi bên được <strong>10 phút</strong>). VĐV ngồi tại vị trí thi đấu từ lúc bắt đến khi thi đấu xong.</p>
+
+                <h3>3. Tính điểm và xếp hạng.</h3>
+                <ul>
+                    <li>VĐV có kết quả thắng được <strong>1,0 điểm</strong>; hòa được <strong>0,5 điểm</strong>; thua được <strong>0 điểm</strong>.</li>
+                    <li>Thứ hạng của VĐV được căn cứ dựa trên thứ hạng cuối cùng của VĐV trong bảng đấu.</li>
+                    <li>Tính từ thời điểm bắt đầu ván đấu, nếu VĐV không có mặt cho đến lúc hết thời gian ván đấu (theo đồng hồ tính giờ) thì sẽ bị xử thua.</li>
+                    <li>Các VĐV bỏ cuộc <strong>2 ván liên tục</strong> trong quá trình thi đấu sẽ bị loại khỏi giải.</li>
+                </ul>
+            </section>
+
+            <section class="hidden-scroll">
+                <h2>IV. Khen thưởng, kỉ luật, khiếu nại.</h2>
+                <h3>1. Khen thưởng</h3>
+                <ul>
+                    <li>Ban tổ chức sẽ trao: <strong>01 giải nhất, 01 nhì, 01 ba</strong>.</li>
+                    <li>Tất cả các VĐV tham gia thi đấu hết ván cuối cùng ở mỗi nội dung đều có quà kỷ niệm của BTC. </li>
+                </ul>
+                
+                <h3>2. Kỉ luật</h3>
+                <p>Vận động viên nào vi phạm Điều lệ giải sẽ xem xét tùy lỗi (nặng hay nhẹ) Ban tổ chức sẽ cảnh cáo hoặc truất quyền thi đấu.</p>
+                
+                <h3>3. Khiếu nại</h3>
+                <p>Vận dộng viên nào muốn khiếu nại thì phải tiến hành ngay sau ván đấu kết thúc.</p>
+            </section>
+            
+            <section class="hidden-scroll">
+                <h2>Điều 5: Một số quy định khác</h2>
+                <ul>
+                    <li>Các VĐV tuyệt đối không được mang các thiết bị truyền thông, thiết bị điện tử, đồng hồ đeo tay có màn hình và tài liệu chuyên môn vào khu vực thi đấu. Ban trọng tài sẽ xử thua ngay khi phát hiện kỳ thủ nào vi phạm quy định này, kể cả khi đã hoàn thành ván cờ.</li>
+                </ul>
+            </section>
+        </div>
+
+        <div class="signature-section hidden-scroll">
+            <div class="signature-block">
+                <p>BAN TỔ CHỨC</p>
+            </div>
+            <div class="signature-block">
+                <p>CHỦ NHIỆM CLB</p>
+            </div>
+        </div>
+
+        <div class="button-container hidden-scroll">
+            <a href="https://docs.google.com/forms/d/1GJoBRZ3OxERoSFpz3jylS-emKDozwdFjJJn5rGwalb8/viewform" class="cta-button" target="_blank">
+                Đăng ký tham gia giải
+            </a>
+            <a href="https://docs.google.com/forms/d/12u11LcayL75-g24G3Srf7kUT542u9TUXeap5hKZLGgQ/viewform" class="cta-button secondary" target="_blank">
+                Đăng ký tham gia CLB
+            </a>
+        </div>
+
+    </div> 
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const hiddenElements = document.querySelectorAll('.hidden-scroll');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show-scroll');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            hiddenElements.forEach((el) => observer.observe(el));
+        });
+    </script>
+</body>
+</html>
